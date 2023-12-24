@@ -1,17 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDom from 'react-dom/client'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Crea un elemento root obteniendo el id del div del index
+//const rootElement = document.getElementById('root')
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// crear un elemento root desde la función createRoot de ReactDom hacia el div "root" del index
+//ReactDom.createRoot(rootElement)
+
+// U otra forma más eficiente es escribirlo todo junto sin crear variable rootElement, sólo root
+const root = ReactDom.createRoot(document.getElementById('root'))
+
+// Utilizamos la función render de la constante root para crear el "hola mundo"
+root.render(<h1>Hello World!</h1>)
