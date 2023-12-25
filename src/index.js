@@ -63,14 +63,36 @@ const root = ReactDom.createRoot(document.getElementById("root"));
 /*
 NOTA: Para evitar la redundacia de div's, existen las etiquetas "Fragment", las cuales carecen de texto alguno dentro de ellas, pero sirven para cumplir la regla de react con respecto a los contenedores. Es muy común verla en proyectos grandes
 */
+
+/*
+Podemos utilizar los "props" para enviar datos y modificar componentes de nuestro proyecto, asignándole el nombre y la propiedad como si fuera una etiqueta común de HTML 
+*/
 root.render(
   <>
-    <Greeting />
-    <UserCard />
-    <Product />
-    <Navbar />
+    <UserCard
+      name="Diego Rodriguez"
+      amount={3000}
+      married={true}
+      points={[99, 23.2, 42.2]}
+      address={{ street: "123 Main Street", city: "New York" }}
+      greet={function () { alert('Hello')}}
+    />
+
+    <UserCard
+      name="Maggie Amezcua"
+      amount={23000}
+      married={false}
+      points={[234, 26.2, 42.2]}
+      address={{ street: "28 Acerina Street", city: "Manzanillo" }}
+      greet={function () { alert('Hello')}}
+    />
   </>
 );
+
+/* <Greeting x="bye" />
+    <Greeting y={30} />
+    <Greeting z={true} />
+    <Greeting a={[1, 2, 3]}/> */
 
 /* Hay diferentes formas de usar componentes dentro de la función render,
 puede ser entre llaves y poniendo adentro la función { function() } o, para un mejor entendimiento, entre etiquetas comúnes de HTML <function></function>, y no es necesario que uses dos etiquetas, puedes cerrarlas ahí mismo "<function/>, son conocidas como "Self-closing tags"
