@@ -2,6 +2,7 @@ import React from "react";
 import ReactDom from "react-dom/client";
 import { Greeting, UserCard } from "./Greeting";
 import { Button } from "./Button";
+import { TaskCard } from "./Task"
 
 // Ejemplo de import desde un archivo que usa export default
 import Product, { Navbar } from "./Product";
@@ -70,31 +71,9 @@ Podemos utilizar los "props" para enviar datos y modificar componentes de nuestr
 */
 root.render(
   <>
-    <Button text="Click me" />
-    <Button text="Pay" />
-    <Button name="José" />
 
-    {/* <UserCard
-      name="Diego Rodriguez"
-      amount={3000}
-      married={true}
-      points={[99, 23.2, 42.2]}
-      address={{ street: "123 Main Street", city: "New York" }}
-      greet={function () {
-        alert("Hello");
-      }}
-    />
-
-    <UserCard
-      name="Maggie Amezcua"
-      amount={23000}
-      married={false}
-      points={[234, 26.2, 42.2]}
-      address={{ street: "28 Acerina Street", city: "Manzanillo" }}
-      greet={function () {
-        alert("Hello");
-      }}
-    /> */}
+  {/* Se pone un booleano entre llaves por la sintaxis de JS */}
+    <TaskCard ready={false} />
   </>
 );
 
