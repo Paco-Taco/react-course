@@ -2,8 +2,8 @@ import React from "react";
 import ReactDom from "react-dom/client";
 import { Greeting, UserCard } from "./Greeting";
 import { Button } from "./Button";
-import { TaskCard } from "./Task"
-
+import { TaskCard } from "./Task";
+import { Saludar } from "./Saludar";
 // Ejemplo de import desde un archivo que usa export default
 import Product, { Navbar } from "./Product";
 
@@ -71,9 +71,9 @@ Podemos utilizar los "props" para enviar datos y modificar componentes de nuestr
 */
 root.render(
   <>
-
-  {/* Se pone un booleano entre llaves por la sintaxis de JS */}
-    <TaskCard ready={false} />
+    {/* Se pone un booleano entre llaves por la sintaxis de JS */}
+    <TaskCard ready={true} />
+    <Saludar />
   </>
 );
 
