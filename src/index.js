@@ -16,6 +16,12 @@ import Product, { Navbar } from "./Product";
 // U otra forma más eficiente es escribirlo todo junto sin crear variable rootElement, sólo root
 const root = ReactDom.createRoot(document.getElementById("root"));
 
+// Creamos esta funcion para mejorar el manejo de cambios dentro del input
+// const handleChange = (e) => {
+//   console.log(e.target.value)
+// }
+
+
 // Crear nuestro primer componente
 // Los componentes son básicamente funciones que retornan código html, cosa que en JS vanilla no es posible.
 
@@ -74,6 +80,34 @@ root.render(
     {/* Se pone un booleano entre llaves por la sintaxis de JS */}
     <TaskCard ready={true} />
     <Saludar />
+    <Button text="saludar" />
+
+    {/* Creamos un formulario que liberará un msg en la consola representando el envío de datos a un server */}
+    {/* <form onSubmit={(e) => {
+      e.preventDefault()
+      console.log("Enviado")
+    }}>
+      <h1>Registro de usuario</h1>
+      <button>Send</button>
+    </form> */}
+
+      {/* Ejemplo de la funcion onDoubleClick dentro del input */}
+    {/* <input id="hola" onDoubleClick={() => {
+      console.log("Dos veces")
+    }}></input> */}
+
+    {/* Llama a la función handleChange cada vez que se escriba algo */}
+    {/* <input id="hola" onChange={handleChange}></input> */}
+
+    {/* Obtiene lo que se escribe cada vez que se escribe algo */}
+    {/* <input id="hola" onChange={(e) => {
+      console.log(e.target.value)
+    }}></input> */}
+
+    {/* Lo mismo que arriba solo que se añaden puntitos supensivos */}
+    {/* <input id="hola" onChange={function(e) {
+      console.log(e.target.value + "...")
+    }}></input> */}
   </>
 );
 

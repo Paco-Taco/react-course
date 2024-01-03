@@ -9,7 +9,11 @@ export function Button({text, name}) {
     if(!text){
         console.error("Text is required")        
     }
-    return <button>
+
+    // Utilizamos la función de react onClick para imprimir en consola
+    return <button onClick={function() {
+        console.log("Hello world")
+    }}>
         {text} - {name}
     </button>
 }
