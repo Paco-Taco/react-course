@@ -4,6 +4,8 @@ import { Greeting, UserCard } from "./Greeting";
 import { Button } from "./Button";
 import { TaskCard } from "./Task";
 import { Saludar } from "./Saludar";
+import { Posts } from "./Posts";
+
 // Ejemplo de import desde un archivo que usa export default
 import Product, { Navbar } from "./Product";
 
@@ -20,7 +22,6 @@ const root = ReactDom.createRoot(document.getElementById("root"));
 // const handleChange = (e) => {
 //   console.log(e.target.value)
 // }
-
 
 // Crear nuestro primer componente
 // Los componentes son básicamente funciones que retornan código html, cosa que en JS vanilla no es posible.
@@ -77,10 +78,13 @@ Podemos utilizar los "props" para enviar datos y modificar componentes de nuestr
 */
 root.render(
   <>
+    {/* Se manda a llamar al componente Posts */}
+    <Posts />
+
     {/* Se pone un booleano entre llaves por la sintaxis de JS */}
-    <TaskCard ready={true} />
+    {/* <TaskCard ready={true} />
     <Saludar />
-    <Button text="saludar" />
+    <Button text="saludar" /> */}
 
     {/* Creamos un formulario que liberará un msg en la consola representando el envío de datos a un server */}
     {/* <form onSubmit={(e) => {
@@ -91,7 +95,7 @@ root.render(
       <button>Send</button>
     </form> */}
 
-      {/* Ejemplo de la funcion onDoubleClick dentro del input */}
+    {/* Ejemplo de la funcion onDoubleClick dentro del input */}
     {/* <input id="hola" onDoubleClick={() => {
       console.log("Dos veces")
     }}></input> */}
