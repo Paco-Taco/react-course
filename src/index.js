@@ -18,6 +18,23 @@ import Product, { Navbar } from "./Product";
 // U otra forma más eficiente es escribirlo todo junto sin crear variable rootElement, sólo root
 const root = ReactDom.createRoot(document.getElementById("root"));
 
+const users = [
+  {
+    id: 1,
+    name: "Diego",
+    image: "https://robohash.org/diego",
+  },
+  {
+    id: 2,
+    name: "Maggie",
+    image: "https://robohash.org/maggie",
+  },
+  {
+    id: 3,
+    name: "Paco",
+    image: "https://robohash.org/paco",
+  },
+];
 // Creamos esta funcion para mejorar el manejo de cambios dentro del input
 // const handleChange = (e) => {
 //   console.log(e.target.value)
@@ -78,8 +95,17 @@ Podemos utilizar los "props" para enviar datos y modificar componentes de nuestr
 */
 root.render(
   <>
+    {users.map((user, index) => {
+      return (
+        <div key={index}>
+          <h1>Hola {user.name}</h1>
+          <img src={user.image} alt="Robot" />
+        </div>
+      );
+    })}
+
     {/* Se manda a llamar al componente Posts */}
-    <Posts />
+    {/* <Posts /> */}
 
     {/* Se pone un booleano entre llaves por la sintaxis de JS */}
     {/* <TaskCard ready={true} />
